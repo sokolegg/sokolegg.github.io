@@ -1,9 +1,13 @@
 body{
 	color: green;
 	background-color: black;
-	font-family: Hack, monospace;
+	background-image: url("images/background.jpg") no-repeat ;
+	background-size: cover;
+	font-family: monospace, Arial;
 	font-size: 40px;
 }
 p{
-	color: lightgreen;
+	width: 100%;
+	text-align: center;
+	color: #000;
 }
