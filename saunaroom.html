@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title></title>
 </head>
 <body>
@@ -74,6 +75,10 @@
 
   body {
     font: 100% / 1.5 Arial;
+    background: url("saunaimages/saunaroom.jpg") no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+
   }
 
   * {
@@ -88,11 +93,10 @@
    /* centre the content in the parallax layers */
   .title {
     text-align: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    
+  }
+  td{
+    padding: 10px;
   }
 
   
@@ -104,24 +108,25 @@
     z-index: 5; /* slide over group 2 */
   }
   #group1 .parallax__layer--base {
-    background: url("images/1.jpg") no-repeat;
+    background: url("saunaimages/text.jpg") no-repeat;
+    opacity: 0.7;
     background-position: center bottom;
-    background-size: contain;
+    background-size: cover;
   }
   #group1 .parallax__layer--fore .title{
-      word-break: break-word;
-      font-size: 70px;
-      text-align: left;
-      color: Black;
-      font-family: Garamond;
-      
+            
+  }
+    #group1 .parallax__layer--deep {
+    
+
   }
 
   #group2 {
     z-index: 3; /* slide under groups 1 and 3 */
   }
   #group2 .parallax__layer--base {
-    background: url("images/2.jpg") no-repeat;
+    background: rgba(49, 0, 0, 0.6);
+    color: red;
     background-position: center bottom;
     background-size: contain;
   }
@@ -134,60 +139,41 @@
     z-index: 4; /* slide over group 2 and 4 */
   }
   #group3 .parallax__layer--base {
-    background: url("images/3.jpg") no-repeat;
+    background: rgba(201, 239, 0, 0.4);
+    color: green;
     background-position: center bottom;
     background-size: contain;
   }
   #group3 .parallax__layer--fore .title{
-      font-size: 50px;
-      color: white;
-      font-family: monospace;
-      left: 150px;
+      
   }
 
 
   #group4 {
     z-index: 2; /* slide under group 3 and 5 */
   }
-  #group4 .parallax__layer--deep {
-    height: 100vh;
-    background-color: black;
 
-  }
   #group4 .parallax__layer--base {
-    background: url("images/4.jpg") no-repeat;
-    background-position: center bottom;
-    background-size: contain;
+    
   }
 
   #group5 {
     z-index: 3; /* slide over group 4 and 6 */
   }
   #group5 .parallax__layer--base {
-    background: url("images/5.jpg") no-repeat;
+    
     background-position: center bottom;
     background-size: contain;
   }
-
-  #group6 {
-    z-index: 2; /* slide under group 5 and 7 */
-  }
-  #group6 .parallax__layer--back {
-
-  }
-  #group6 .parallax__layer--base {
-    background: url("images/6.jpg") no-repeat;
-    background-position: center bottom;
+  #tablegood{
+    background: url("saunaimages/good.jpg") no-repeat;
+    background-position: center top;
     background-size: contain;
   }
-
-  #group7 {
-    z-index: 3; /* slide over group 7 */
-  }
-  #group7 .parallax__layer--base {
-   background: url("images/7.jpg") no-repeat;
-    background-position: center bottom;
-    background-size: contain;
+  #tablebad{
+    background: url("saunaimages/bad.jpg") no-repeat;
+    background-position: center top;
+    background-size: contain; 
   }
 
 
@@ -199,17 +185,38 @@
   <div class="parallax">
 
     <div id="group1" class="parallax__group">
+    <div class="parallax__layer parallax__layer--deep">
+        <div class="title"></div>
+      </div>
       <div class="parallax__layer parallax__layer--base">
         <div class="title"></div>
       </div>
       <div class="parallax__layer parallax__layer--fore">
-        <div class="title"> Victoria Blagoveschenskaya</div>
+        <div class="title"> </div>
       </div>
     </div>
 
     <div id="group2" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
-        <div class="title"></div>
+        <div class="title">Строить сауну на даче?
+        <div id="imagebad"></div>
+        <div id="tablebad">
+          <table>
+            <tr>
+              <td>x</td>
+              <td>Дорого</td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>Долго</td>
+            </tr>
+            <tr>
+              <td>x</td>
+              <td>Далеко</td>
+            </tr>               
+          </table>
+        </div>
+        </div>
       </div>
       <div class="parallax__layer parallax__layer--back">
         <div class="title"></div>
@@ -218,23 +225,45 @@
 
     <div id="group3" class="parallax__group">
       <div class="parallax__layer parallax__layer--fore">
-        <div class="title"> 175 cm </div>
+        <div class="title">
+
+        </div>
       </div>
       <div class="parallax__layer parallax__layer--base">
-        <div class="title"></div>
+        <div class="title">
+          <div class="title">Сауна у себя в квартире или доме?
+        <div id="imagegood"></div>
+        <div id="tablegood">
+          <table>
+            <tr>
+              <td>+</td>
+              <td>Дешево!</td>
+            </tr>
+            <tr>
+              <td>+</td>
+              <td>Быстро!</td>
+            </tr>
+            <tr>
+              <td>+</td>
+              <td>Всегда рядом!</td>
+            </tr>               
+          </table>
+        </div>
+        </div>
       </div>
     </div>
-
+    </div>
 
     <div id="group4" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
-        <div class="title"></div>
+        <div class="title"> Сделать заказ в Пскове и Псковской области можно прямо сейчас</div>
+        <div class="title"> +79112154246</div>
       </div>
       <div class="parallax__layer parallax__layer--back">
         <div class="title"></div>
       </div>
       <div class="parallax__layer parallax__layer--deep">
-        <div class="title"></div>
+
       </div>
     </div>
 
@@ -243,23 +272,6 @@
       <div class="parallax__layer parallax__layer--fore">
         <div class="title"></div>
       </div>
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title"></div>
-      </div>
-    </div>
-
-
-    <div id="group6" class="parallax__group">
-      <div class="parallax__layer parallax__layer--back">
-        <div class="title"></div>
-      </div>
-      <div class="parallax__layer parallax__layer--base">
-        <div class="title"></div>
-      </div>
-    </div>
-
-
-    <div id="group7" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
         <div class="title"></div>
       </div>
