@@ -1,3 +1,4 @@
-User-agent: *
+User-agent: Yandex
 Allow: /
 Allow: /cristina/
+sitemap: https://sokolegg.github.io/sitemap.xml
