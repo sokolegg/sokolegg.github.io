@@ -59,7 +59,7 @@
 				var ambient = new THREE.AmbientLight( 0xfffffff );
 				scene.add( ambient );
 				var directionalLight = new THREE.DirectionalLight( 0xffeedd );
-				directionalLight.position.set( 0, 0, 1 );
+				directionalLight.position.set( 100, 100, 100 );
 				scene.add( directionalLight );
 				// texture
 				var manager = new THREE.LoadingManager();
@@ -88,7 +88,7 @@
 							child.material.map = texture;
 						}
 					} );
-					object.position.y = - 95;
+					object.position.y = 0;
 					scene.add( object );
 				}, onProgress, onError );
 				//
