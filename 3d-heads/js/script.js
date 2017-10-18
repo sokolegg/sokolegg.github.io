@@ -24,26 +24,18 @@ window.onload = function () {
 	manager.onProgress = function ( item, loaded, total ) {
 		console.log( item, loaded, total );
 	};
-	var texture = new THREE.Texture();
-	var onProgress = function ( xhr ) {
-		if ( xhr.lengthComputable ) {
-			var percentComplete = xhr.loaded / xhr.total * 100;
-			console.log( Math.round(percentComplete, 2) + '% downloaded' );
-		}
-	};
-	var onError = function ( xhr ) {
-	};
+	
+	var loader = new THREE.OBJLoader(manager);
 
-	var loader = new THREE.OBJLoader( manager );
-	loader.load( 'obj/test.obj', function ( object ) {
-		object.traverse( function ( child ) {
-			if ( child instanceof THREE.Mesh ) {
-				child.material.map = texture;
+	// load a resource
+	loader.load(
+			// resource URL
+			'models/monster.obj',
+			// Function when resource is loaded
+			function ( object ) {
+				scene.add( object );
 			}
-		} );
-		object.position.y = 0;
-		scene.add( object );
-	}, onProgress, onError );
+	);
 
 
 	renderer.render(scene, camera);
