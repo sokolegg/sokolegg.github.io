@@ -18,14 +18,15 @@ window.onload = function () {
 
 	var light = new THREE.AmbientLight(0xffffff);
 	scene.add(light);
+	var axisHelper = new THREE.AxisHelper( 5 );
+	scene.add( axisHelper );
 
-
-	var manager = new THREE.DefaultLoadingManager();
+	var manager = new THREE.LoadingManager();
 	manager.onProgress = function ( item, loaded, total ) {
 		console.log( item, loaded, total );
 	};
 	
-	var loader = new THREE.OBJLoader(manager);
+	var loader = new THREE.OBJLoader2(manager);
 	loader.setMaterial()
 
 	// load a resource
