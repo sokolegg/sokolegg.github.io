@@ -27,7 +27,6 @@ window.onload = function () {
 	};
 	
 	var loader = new THREE.OBJLoader2(manager);
-	loader.setMaterial()
 
 	// load a resource
 	loader.load(
