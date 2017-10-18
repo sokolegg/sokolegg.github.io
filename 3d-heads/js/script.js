@@ -20,12 +20,13 @@ window.onload = function () {
 	scene.add(light);
 
 
-	var manager = new THREE.LoadingManager();
+	var manager = new THREE.DefaultLoadingManager();
 	manager.onProgress = function ( item, loaded, total ) {
 		console.log( item, loaded, total );
 	};
 	
 	var loader = new THREE.OBJLoader(manager);
+	loader.setMaterial()
 
 	// load a resource
 	loader.load(
@@ -33,6 +34,7 @@ window.onload = function () {
 			'obj/test.obj',
 			// Function when resource is loaded
 			function ( object ) {
+				object.position.set(0,0,0);
 				scene.add( object );
 			}
 	);
