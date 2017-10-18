@@ -30,7 +30,7 @@ window.onload = function () {
 	// load a resource
 	loader.load(
 			// resource URL
-			'models/monster.obj',
+			'obj/test.obj',
 			// Function when resource is loaded
 			function ( object ) {
 				scene.add( object );
