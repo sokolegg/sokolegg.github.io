@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="bootstrap.min.css" rel="stylesheet" />
+	<title>
+		
+	</title>
+</head>
+<body>
+	<h1>
+		Ni4to X
+	</h1>
+
+
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img class="d-block" src="images/1.jpg" alt="First slide">
+    </div>
+    <div class="item">
+      <img class="d-block" src="images/2.jpg" alt="Second slide">
+    </div>
+    <div class="item">
+      <img class="d-block" src="images/3.jpg" alt="Third slide">
+    </div>
+  </div>
+</div>
+<p>
+		Мы всегда стремились понять, что есть Ni4to. Сейчас мы готовы презентовать Ni4to X. Он настолько легкий и невероятно тонкий, практически невесомый. Это совершенство воображения и дизайна. 
+</p>
+
+<div class="block">
+
+<div class="left">
+<img src="images/volos.jpg" >
+</div>
+
+<div class="right">
+<p>
+  Ni4to X - самый тонкий девайс в мире. Только вообразите - он тоньше человеческого волоса!
+</p>
+</div>
+
+</div>
+
+<div class="block">
+
+<div class="left">
+<p>
+  Ni4to X обладает технологией Memories® - стоит лишь подумать о каком-то счастливом событии из жизни как Ni4to X воспроизведет отрывки из них напрямую в Ваше сознание
+</p>
+</div>
+<div class="right">
+<img src="images/happy.jpg" >
+</div>
+</div>
+
+<div class="block">
+
+<div class="left">
+<img src="images/4.jpg" >
+</div>
+<div class="right">
+<p>
+  Возможности и характеристики Ni4to X безграничны. Он для творческих людей. С Ni4to Вы будете свободны в выборе жизненного пути
+</p>
+</div>
+</div>
+
+
+<p>
+    Ni4to X доступен по цене <i>799$*</i> в 4 замечательных цветах: Алмазный, Золотой Воздух, Кристальный и Прозрачный
+</p>
+
+<div id="colorCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#colorCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#colorCarousel" data-slide-to="1"></li>
+    <li data-target="#colorCarousel" data-slide-to="2"></li>
+    <li data-target="#colorCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img class="d-block" src="images/super-white.jpg" alt="1 slide">
+      <p class="ctext"> Прозрачный. </p>
+    </div>
+    <div class="item">
+      <img class="d-block" src="images/crystal.jpg" alt="2 slide">
+      <p class="ctext"> Кристальный. </p>
+    </div>
+    <div class="item">
+      <img class="d-block" src="images/golden-air.jpg" alt="3 slide">
+      <p class="ctext"> Золотой Воздух. </p>
+    </div>
+    <div class="item">
+      <img class="d-block" src="images/diamond.jpg" alt="4 slide">
+      <p class="ctext"> Алмазный. </p>
+    </div>
+  </div>
+</div>
+
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="docs.min.js"></script>
+<script>
+        // Added this just so I didn't have to wait 5 seconds to see if the transition worked. //
+        $(document).ready(function() {
+            $('#myCarousel').carousel({
+                interval:   3000
+            });
+            $('#colorCarousel').carousel({
+                interval:   3000
+            });
+        });
+    </script>
+
+</body>
+</html>
